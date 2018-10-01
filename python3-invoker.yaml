@@ -4,7 +4,7 @@ kind: Invoker
 metadata:
   name: python3
 spec:
-  version: 0.0.7-snapshot
+  version: 0.0.9-snapshot
   matchers:
   - "*.py"
   handler:
@@ -16,7 +16,7 @@ spec:
   files:
   - path: Dockerfile
     template: |
-      FROM matthewmcnew/python3-function-invoker
+      FROM matthewmcnew/python3-function-invoker:{{.InvokerVersion}}
       ARG FUNCTION_MODULE={{.ArtifactBase}}
       ARG FUNCTION_HANDLER={{.Handler}}
       ADD ./{{.ArtifactBase}} /
