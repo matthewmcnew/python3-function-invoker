@@ -16,7 +16,7 @@ spec:
   files:
   - path: Dockerfile
     template: |
-      FROM projectriff/python3-function-invoker:{{.InvokerVersion}}
+      FROM matthewmcnew/python3-function-invoker
       ARG FUNCTION_MODULE={{.ArtifactBase}}
       ARG FUNCTION_HANDLER={{.Handler}}
       ADD ./{{.ArtifactBase}} /
